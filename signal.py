@@ -2,7 +2,7 @@ from datetime import datetime # this is for displaying the date how we want it
 import pandas as pd # this is for loading the file and writing the new ones
 
 # load the file
-df = pd.read_csv('messages.csv')
+df = pd.read_csv('messages.csv', low_memory=False)
 
 # this makes the contacts into a list
 contacts = df['conversationId'].unique()
